@@ -1,4 +1,6 @@
 # Desafio-BeBlüe
+<b>Autor:</b> Ricardo Silva de Barros </br>
+<b>Data:</b> 01 de Julho de 2019
 
 App escrito completamente em SWIFT 4.2</br>
 arquitetura: CleanSwift (https://github.com/Clean-Swift/CleanStore).</br>
@@ -27,3 +29,7 @@ Caso o usuário queira filtrar as fotos das sondas basta utilizar o seletor de d
 de qualquer data em qualquer ano em tempo real.
 </br>
 </br>
+
+Exemplo de execução do Aplicativo !!!
+
+![](ezgif.com-video-to-gif.gif)
