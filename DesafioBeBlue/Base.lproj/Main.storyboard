@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ulA-65-P8j">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation-->
+        <scene sceneID="e0F-df-USp">
+            <objects>
+                <navigationController title="Navigation" id="ulA-65-P8j" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3ee-fW-tzo">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.1764705882352941" green="0.30196078431372547" blue="0.61816916870915029" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ccO-62-TES" kind="relationship" relationship="rootViewController" id="6Ol-7Z-ACJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XbR-jb-351" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="90" y="-199"/>
+        </scene>
+        <!--Desafio BeBlüe-->
+        <scene sceneID="MCU-Rl-DfO">
+            <objects>
+                <viewController storyboardIdentifier="PhotoGridViewController" id="ccO-62-TES" customClass="PhotoGridViewController" customModule="DesafioBeBlue" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="16G-k6-obL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BLN-ck-lgx">
+                                <rect key="frame" x="0.0" y="64" width="320" height="29"/>
+                                <color key="backgroundColor" red="0.1764705882" green="0.30196078430000001" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="MtT-Pd-m9S"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Curiosity" width="124"/>
+                                    <segment title="Opportunity"/>
+                                    <segment title="Spirit"/>
+                                </segments>
+                                <connections>
+                                    <action selector="filterActivated:" destination="ccO-62-TES" eventType="valueChanged" id="Y3D-NL-RkC"/>
+                                </connections>
+                            </segmentedControl>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0uD-QH-X1N">
+                                <rect key="frame" x="8" y="92" width="304" height="344"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="0.0" id="fbB-0l-hAT">
+                                    <size key="itemSize" width="165" height="190"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="8" minY="5" maxX="8" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="PhotoGridCell" id="2A3-a5-HvC" customClass="PhotoGridCellViewController" customModule="DesafioBeBlue" customModuleProvider="target">
+                                        <rect key="frame" x="69.5" y="5" width="165" height="190"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="165" height="190"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xp4-9B-caU">
+                                                    <rect key="frame" x="0.0" y="0.0" width="165" height="190"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UbZ-Af-NG8">
+                                                    <rect key="frame" x="0.0" y="0.0" width="165" height="190"/>
+                                                    <connections>
+                                                        <action selector="touch_nasaPhoto:" destination="2A3-a5-HvC" eventType="touchUpInside" id="VWH-yh-wYM"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="UbZ-Af-NG8" secondAttribute="trailing" id="1Le-aK-qrn"/>
+                                            <constraint firstAttribute="trailing" secondItem="xp4-9B-caU" secondAttribute="trailing" id="EL5-KI-S1c"/>
+                                            <constraint firstAttribute="bottom" secondItem="xp4-9B-caU" secondAttribute="bottom" id="VDM-UD-rwH"/>
+                                            <constraint firstItem="UbZ-Af-NG8" firstAttribute="leading" secondItem="2A3-a5-HvC" secondAttribute="leading" id="ZYl-uX-Pf8"/>
+                                            <constraint firstItem="xp4-9B-caU" firstAttribute="leading" secondItem="2A3-a5-HvC" secondAttribute="leading" id="dXT-yG-8XV"/>
+                                            <constraint firstItem="UbZ-Af-NG8" firstAttribute="top" secondItem="2A3-a5-HvC" secondAttribute="top" id="eM3-i4-tUi"/>
+                                            <constraint firstAttribute="bottom" secondItem="UbZ-Af-NG8" secondAttribute="bottom" id="wul-uK-m7c"/>
+                                            <constraint firstItem="xp4-9B-caU" firstAttribute="top" secondItem="2A3-a5-HvC" secondAttribute="top" id="z1G-Kl-c2E"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="xp4-9B-caU" id="Nqr-Pr-9cV"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFD-M7-XL1">
+                                <rect key="frame" x="0.0" y="468" width="226" height="100"/>
+                                <date key="date" timeIntervalSinceReferenceDate="583603634.083395">
+                                    <!--2019-06-30 16:07:14 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="en_US"/>
+                                <connections>
+                                    <action selector="datePickerChanged:" destination="ccO-62-TES" eventType="valueChanged" id="9YW-oc-mNq"/>
+                                </connections>
+                            </datePicker>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="gpJ-cr-VdL">
+                                <rect key="frame" x="141.5" y="265.5" width="37" height="37"/>
+                                <color key="color" red="1" green="0.22210567049999999" blue="0.15070092439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Data de Consulta das Fotos de Marte." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xF1-JE-fLM">
+                                <rect key="frame" x="0.0" y="439" width="320" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Kaa-L8-25S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.22210567053920471" blue="0.15070092443716454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RFD-M7-XL1" firstAttribute="top" secondItem="xF1-JE-fLM" secondAttribute="bottom" constant="1" id="4Zg-pe-LmG"/>
+                            <constraint firstItem="xF1-JE-fLM" firstAttribute="top" secondItem="0uD-QH-X1N" secondAttribute="bottom" constant="3" id="7bo-fU-3Vd"/>
+                            <constraint firstItem="gXd-DA-8Yd" firstAttribute="trailing" secondItem="0uD-QH-X1N" secondAttribute="trailing" constant="8" id="89E-Tz-Duy"/>
+                            <constraint firstItem="0uD-QH-X1N" firstAttribute="leading" secondItem="gXd-DA-8Yd" secondAttribute="leading" constant="8" id="APg-Ju-xGz"/>
+                            <constraint firstItem="xF1-JE-fLM" firstAttribute="leading" secondItem="RFD-M7-XL1" secondAttribute="leading" id="DE7-1K-vvy"/>
+                            <constraint firstItem="BLN-ck-lgx" firstAttribute="trailing" secondItem="gXd-DA-8Yd" secondAttribute="trailing" id="FBa-mZ-lGq"/>
+                            <constraint firstItem="xF1-JE-fLM" firstAttribute="trailing" secondItem="gXd-DA-8Yd" secondAttribute="trailing" id="JQX-lt-tUR"/>
+                            <constraint firstItem="RFD-M7-XL1" firstAttribute="top" secondItem="xF1-JE-fLM" secondAttribute="bottom" constant="1" id="NY0-52-Tg0"/>
+                            <constraint firstItem="RFD-M7-XL1" firstAttribute="leading" secondItem="gXd-DA-8Yd" secondAttribute="leading" id="Nug-PO-2O0"/>
+                            <constraint firstItem="xF1-JE-fLM" firstAttribute="trailing" secondItem="RFD-M7-XL1" secondAttribute="trailing" id="RVg-wD-I4p"/>
+                            <constraint firstItem="RFD-M7-XL1" firstAttribute="trailing" secondItem="gXd-DA-8Yd" secondAttribute="trailing" id="TBq-km-zOf"/>
+                            <constraint firstItem="xF1-JE-fLM" firstAttribute="leading" secondItem="gXd-DA-8Yd" secondAttribute="leading" id="Vze-In-rV8"/>
+                            <constraint firstItem="gpJ-cr-VdL" firstAttribute="centerY" secondItem="16G-k6-obL" secondAttribute="centerY" id="Xvi-Wa-pAJ"/>
+                            <constraint firstItem="0uD-QH-X1N" firstAttribute="top" secondItem="BLN-ck-lgx" secondAttribute="bottom" id="bna-Qc-ayw"/>
+                            <constraint firstItem="gpJ-cr-VdL" firstAttribute="centerX" secondItem="16G-k6-obL" secondAttribute="centerX" id="cJu-te-bbm"/>
+                            <constraint firstItem="BLN-ck-lgx" firstAttribute="leading" secondItem="gXd-DA-8Yd" secondAttribute="leading" id="cuu-IV-aFC"/>
+                            <constraint firstItem="gXd-DA-8Yd" firstAttribute="bottom" secondItem="0uD-QH-X1N" secondAttribute="bottom" constant="132" id="ldq-zQ-Dd0"/>
+                            <constraint firstItem="BLN-ck-lgx" firstAttribute="top" secondItem="gXd-DA-8Yd" secondAttribute="top" id="oyG-g6-LeR"/>
+                            <constraint firstItem="RFD-M7-XL1" firstAttribute="bottom" secondItem="gXd-DA-8Yd" secondAttribute="bottom" id="uZL-5F-jNv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gXd-DA-8Yd"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Desafio BeBlüe" id="Nv3-ys-2UL"/>
+                    <connections>
+                        <outlet property="activityMonitor" destination="gpJ-cr-VdL" id="d7Q-Ls-6qO"/>
+                        <outlet property="datePicker" destination="RFD-M7-XL1" id="lbR-0P-e5g"/>
+                        <outlet property="labelInformation" destination="xF1-JE-fLM" id="bYI-WA-oMR"/>
+                        <outlet property="photoGridCollection" destination="0uD-QH-X1N" id="ypL-yH-oi0"/>
+                        <outlet property="segmentedFilter" destination="BLN-ck-lgx" id="1gr-el-kfN"/>
+                        <segue destination="taV-Km-bDz" kind="show" id="nfF-Dg-XwC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZTa-xu-KJe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="960.79999999999995" y="-199.25037481259372"/>
+        </scene>
+        <!--Detalhe da Foto-->
+        <scene sceneID="SzW-Ro-c7g">
+            <objects>
+                <viewController storyboardIdentifier="ShowPhotoViewController" title="Detalhe da Foto" id="taV-Km-bDz" customClass="ShowPhotoViewController" customModule="DesafioBeBlue" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zFC-T4-5ph">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aw7-Fw-f9S">
+                                <rect key="frame" x="0.0" y="102" width="320" height="466"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jBU-47-Pm3">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="466"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="jBU-47-Pm3" firstAttribute="centerY" secondItem="aw7-Fw-f9S" secondAttribute="centerY" id="7SM-FU-AQJ"/>
+                                    <constraint firstItem="jBU-47-Pm3" firstAttribute="top" secondItem="aw7-Fw-f9S" secondAttribute="top" id="AzD-uw-4gT"/>
+                                    <constraint firstItem="jBU-47-Pm3" firstAttribute="leading" secondItem="aw7-Fw-f9S" secondAttribute="leading" id="Bb8-gU-Rkd"/>
+                                    <constraint firstAttribute="trailing" secondItem="jBU-47-Pm3" secondAttribute="trailing" id="voM-P4-fcA"/>
+                                    <constraint firstItem="jBU-47-Pm3" firstAttribute="centerX" secondItem="aw7-Fw-f9S" secondAttribute="centerX" id="vse-37-1pT"/>
+                                    <constraint firstAttribute="bottom" secondItem="jBU-47-Pm3" secondAttribute="bottom" id="wMN-AY-CyM"/>
+                                </constraints>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera FullName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnJ-tY-BtA">
+                                <rect key="frame" x="16" y="72" width="155" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="T36-i2-X5w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otx-iW-jXa">
+                                <rect key="frame" x="0.0" y="72" width="320" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="b1e-w0-jph"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="touch_cameraName:" destination="taV-Km-bDz" eventType="touchUpInside" id="ncx-UI-5he"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1Nd-bQ-QTI" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KnJ-tY-BtA" secondAttribute="trailing" symbolic="YES" id="1fm-QZ-GoW"/>
+                            <constraint firstItem="aw7-Fw-f9S" firstAttribute="bottom" secondItem="1Nd-bQ-QTI" secondAttribute="bottom" id="97J-N4-MA0"/>
+                            <constraint firstItem="aw7-Fw-f9S" firstAttribute="leading" secondItem="1Nd-bQ-QTI" secondAttribute="leading" id="FCX-T0-8vd"/>
+                            <constraint firstItem="aw7-Fw-f9S" firstAttribute="top" secondItem="KnJ-tY-BtA" secondAttribute="bottom" id="PNV-7D-s81"/>
+                            <constraint firstItem="otx-iW-jXa" firstAttribute="trailing" secondItem="1Nd-bQ-QTI" secondAttribute="trailing" id="Uta-vq-X4I"/>
+                            <constraint firstItem="otx-iW-jXa" firstAttribute="leading" secondItem="1Nd-bQ-QTI" secondAttribute="leading" id="gRj-5d-EU8"/>
+                            <constraint firstItem="otx-iW-jXa" firstAttribute="top" secondItem="1Nd-bQ-QTI" secondAttribute="top" constant="8" id="q5a-2c-L2W"/>
+                            <constraint firstItem="aw7-Fw-f9S" firstAttribute="trailing" secondItem="1Nd-bQ-QTI" secondAttribute="trailing" id="qCP-Wt-CTY"/>
+                            <constraint firstItem="KnJ-tY-BtA" firstAttribute="leading" secondItem="1Nd-bQ-QTI" secondAttribute="leading" constant="16" id="xb8-LE-Zwd"/>
+                            <constraint firstItem="KnJ-tY-BtA" firstAttribute="top" secondItem="1Nd-bQ-QTI" secondAttribute="top" constant="8" id="yN4-n3-pQV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1Nd-bQ-QTI"/>
+                    </view>
+                    <connections>
+                        <outlet property="labelCameraName" destination="KnJ-tY-BtA" id="sH4-u2-Jlq"/>
+                        <outlet property="photoImageView" destination="jBU-47-Pm3" id="gwa-YE-2SE"/>
+                        <outlet property="scrollView" destination="aw7-Fw-f9S" id="JC0-Vb-qtM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dha-Fw-aKK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1879.7101449275365" y="-199.72826086956522"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+</document>

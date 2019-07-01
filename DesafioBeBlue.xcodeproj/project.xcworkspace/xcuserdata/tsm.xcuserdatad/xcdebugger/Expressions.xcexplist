@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "PhotoGridViewController.collectionView(_:cellForItemAt:):PhotoGridViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "displayedPhotos">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PhotoGridViewController.getSelectedDateInPicker():PhotoGridViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "datePicker.date">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in ServiceNasaAPI.getDataPackage(astromobileName:earthDate:):seviceNasaAPI.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "queryMounted">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ServiceNasaAPI.getDataPackage(astromobileName:earthDate:):seviceNasaAPI.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "queryMounted">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
